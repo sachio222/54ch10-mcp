@@ -4,7 +4,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "54ch10-mcp"
+        "github:sachio222/54ch10-mcp"
       ],
       "env": {
         "BRIEF_API_BASE": "https://54ch10.uk",

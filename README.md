@@ -16,26 +16,62 @@ Exposes one tool: **brief**.
 | package name | `54ch10-mcp` |
 | MCP registry name (`mcpName`) | `io.github.sachio222/54ch10-mcp` |
 | Manifest | `server.json` |
+| Primary install (today) | `npx -y github:sachio222/54ch10-mcp` |
 
 ## Install / run
 
 Requires Node.js 18+.
 
-### After the package is on the public registry
+### Primary (works today)
 
-Use npx with package `54ch10-mcp` (see CONFIG.example.json).
+No public npmjs package yet. Install from the public GitHub repo:
+
+```bash
+npx -y github:sachio222/54ch10-mcp
+```
+
+Or as a git dependency:
+
+```bash
+npm install github:sachio222/54ch10-mcp
+```
+
+Claude Desktop / Cursor — see `CONFIG.example.json`:
+
+```json
+{
+  "mcpServers": {
+    "54ch10": {
+      "command": "npx",
+      "args": ["-y", "github:sachio222/54ch10-mcp"],
+      "env": {
+        "BRIEF_API_BASE": "https://54ch10.uk",
+        "BRIEF_API_KEY": ""
+      }
+    }
+  }
+}
+```
+
+### GitHub Packages (not primary)
+
+GitHub Packages npm only supports **scoped** packages (@`sachio222/...`). Consumers need `@sachio222:registry=https://npm.pkg.github.com` and auth. Not a drop-in for unscoped agent installs, so not primary.
+
+### npmjs.org (not published)
+
+`54ch10-mcp` is not on registry.npmjs.org yet (404). Do not rely on `npx 54ch10-mcp` until a future publish.
 
 ### From this directory (local)
 
-1. Install package dependencies (see package.json).
-2. Start with the start script, or: node src/index.js
+1. `npm install` (see package.json).
+2. `npm start` or `node src/index.js`
 
 The process speaks MCP over **stdio**. Hosts spawn it; do not expect interactive terminal output.
 
 | Env | Purpose |
-|-----|---------|
+|-----|-------|
 | BRIEF_API_BASE | Override API base (default https://54ch10.uk) |
-| BRIEF_API_KEY | Optional paid key. Empty → wrapper sends X-54ch10-Free: 1 |
+| BRIEF_API_KEY | Optional paid key. Empty — wrapper sends X-54ch10-Free: 1 |
 
 Smoke: GET https://54ch10.uk/v1/brief/free?type=url&q=https://example.com
 
@@ -44,11 +80,11 @@ Optional: use the inspect script in package.json with the MCP Inspector.
 ## Tool: brief
 
 | Arg | Type | Required | Description |
-|-----|------|----------|-------------|
+|-----|-----|--------|----------|
 | type | address / token / url | yes | What to brief |
-| q | string | yes | Address, token id/symbol, or URL |
+| q | string | yes | Address, token id/symbol, or URL _|
 
-Returns the live JSON brief (score, band, flags, summary, sources, disclaimer, …).
+Returns the live JSON brief (score, band, flags, summary, sources, disclaimer, ‧).
 
 ## Auth / payments
 
@@ -64,19 +100,17 @@ Local prep (this folder):
 
 - [x] Live HTTPS tool target
 - [x] package.json name 54ch10-mcp + mcpName = io.github.sachio222/54ch10-mcp
-- [x] server.json matching mcpName
-- [x] CONFIG.example.json + README
-- [x] Pack dry-run verification (see gtm/listings-log.md)
-- [ ] Public GitHub repo sachio222/54ch10-mcp for io.github.sachio222 namespace
-- [ ] Public JS-registry auth on this box — GAP in listings-log (do not invent secrets)
-- [ ] After package 0.1.0 is public: mcp-publisher login github, then publish
+- [x] server.json matching mcpName (description ≥100 chars)
+- [x] CONFIG.example.json + README (github: primary install)
+- [x] Public GitHub repo https://github.com/sachio222/54ch10-mcp
+- [ ] Public npmjs 54ch10-mcp@0.1.0 — not published yet
+- [ ] Official MCP Registry — blocked until npmjs package exists (npm registryType = registry.npmjs.org only)
+- [ ] After npmjs is public: mcp-publisher login github, then publish
 
-See gtm/listings-log.md for exact next steps once auth exists.
-
-Also: mcp.so / Smithery / awesome-mcp-servers PRs as sachio222 after the package is live.
+Also: mcp.so / Smithery / awesome-mcp-servers PRs as sachio222 after the package is on npmjs.
 
 **Do not** Discord/X auto-post.
 
 ## Disclaimer
 
-Informational tooling only. Not financial, investment, legal, or tax advice. Full text: https://54ch10.uk/LEGAL_DISCLAIMER.txt
+Informational tooling only. Not financial, investment, legal, or tax advice. Full text: https://54ch10.uk/LEGAL_DISCLAIMQR.txt

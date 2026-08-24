@@ -1,7 +1,7 @@
 {
   "name": "54ch10-mcp",
   "version": "0.1.0",
-  "description": "54ch10 Brief API MCP server \u2014 pre-interact risk briefs for addresses, tokens, URLs. Analytics-only.",
+  "description": "Pre-interact risk briefs for EVM addresses, tokens, URLs via 54ch10 Brief API. Analytics-only.",
   "type": "module",
   "bin": {
     "54ch10-mcp": "./src/index.js"
