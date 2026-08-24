@@ -1,0 +1,51 @@
+{
+  "name": "54ch10-mcp",
+  "version": "0.1.0",
+  "description": "54ch10 Brief API MCP server \u2014 pre-interact risk briefs for addresses, tokens, URLs. Analytics-only.",
+  "type": "module",
+  "bin": {
+    "54ch10-mcp": "./src/index.js"
+  },
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node src/index.js",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "54ch10",
+    "brief",
+    "security",
+    "cryptocurrency",
+    "model-context-protocol",
+    "x402"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  },
+  "mcpName": "io.github.sachio222/54ch10-mcp",
+  "files": [
+    "src",
+    "README.md",
+    "CONFIG.example.json",
+    "server.json"
+  ],
+  "author": "54ch10",
+  "homepage": "https://54ch10.uk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sachio222/54ch10-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sachio222/54ch10-mcp/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

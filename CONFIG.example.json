@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "54ch10": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "54ch10-mcp"
+      ],
+      "env": {
+        "BRIEF_API_BASE": "https://54ch10.uk",
+        "BRIEF_API_KEY": ""
+      }
+    }
+  }
+}
