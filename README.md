@@ -4,7 +4,7 @@ Thin Model Context Protocol wrapper around the **54ch10** live HTTPS API.
 
 - Live API base: https://54ch10.uk
 - Brief: https://54ch10.uk/v1/brief?type=address|token|url&q=...
-- Toolkit: `/v1/whois`, `/v1/dns`, `/v1/tls`, `/v1/normalize-url`
+- Toolkit: `/v1/whois`, `/v1/dns`, `/v1/tls`, `/v1/normalize-url, hash, encode, fetch, paste`
 - Free/demo: header `X-54ch10-Free: 1` or `/v1/<tool>/free` siblings
 - OpenAPI: https://54ch10.uk/openapi.json
 - x402 discovery: https://54ch10.uk/.well-known/x402

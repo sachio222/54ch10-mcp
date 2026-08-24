@@ -1,7 +1,7 @@
 {
   "name": "54ch10-mcp",
-  "version": "0.2.0",
-  "description": "54ch10 MCP: brief + whois/dns/tls/normalize-url against https://54ch10.uk. Analytics-only.",
+  "version": "0.3.0",
+  "description": "54ch10 MCP: brief + toolkit (whois/dns/tls/normalize/hash/encode/fetch/paste) against https://54ch10.uk. Analytics-only.",
   "type": "module",
   "bin": {
     "54ch10-mcp": "./src/index.js"
