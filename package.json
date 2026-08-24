@@ -1,7 +1,7 @@
 {
   "name": "54ch10-mcp",
-  "version": "0.1.0",
-  "description": "Pre-interact risk briefs for EVM addresses, tokens, URLs via 54ch10 Brief API. Analytics-only.",
+  "version": "0.2.0",
+  "description": "54ch10 MCP: brief + whois/dns/tls/normalize-url against https://54ch10.uk. Analytics-only.",
   "type": "module",
   "bin": {
     "54ch10-mcp": "./src/index.js"
@@ -19,6 +19,10 @@
     "mcp",
     "54ch10",
     "brief",
+    "whois",
+    "dns",
+    "tls",
+    "normalize-url",
     "security",
     "cryptocurrency",
     "model-context-protocol",

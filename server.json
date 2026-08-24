@@ -1,9 +1,9 @@
 {
   "name": "io.github.sachio222/54ch10-mcp",
-  "title": "54ch10 Brief",
-  "version": "0.1.0",
+  "title": "54ch10",
+  "version": "0.2.0",
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "description": "Pre-interact risk briefs for EVM addresses, tokens, URLs via 54ch10 Brief API. Analytics-only.",
+  "description": "54ch10 MCP tools: pre-interact brief plus whois/RDAP, DNS, TLS/CT, and URL normalize against https://54ch10.uk. Analytics-only \u2014 not financial advice.",
   "websiteUrl": "https://54ch10.uk",
   "repository": {
     "url": "https://github.com/sachio222/54ch10-mcp",
@@ -14,7 +14,7 @@
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "54ch10-mcp",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "runtimeHint": "npx",
       "transport": {
         "type": "stdio"
