@@ -1,0 +1,80 @@
+{
+  "manifest_version": "0.3",
+  "name": "54ch10-mcp",
+  "display_name": "54ch10",
+  "version": "0.3.3",
+  "description": "Wrap before you click \u2014 pre-interact URL check for agents. Jobs: open (GET /v1/open page_risk + domain), open_batch, fetch (SSRF-safe markdown), domain (whois/dns/tls). Free taste then $1/80 stack. Standing order: https://54ch10.uk/wire.md",
+  "author": {
+    "name": "54ch10",
+    "url": "https://54ch10.uk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sachio222/54ch10-mcp.git"
+  },
+  "homepage": "https://54ch10.uk",
+  "documentation": "https://54ch10.uk/wire.md",
+  "license": "MIT",
+  "privacy_policies": [
+    "https://54ch10.uk"
+  ],
+  "keywords": [
+    "mcp",
+    "54ch10",
+    "wrap-before-click",
+    "url-safety",
+    "ssrf",
+    "whois",
+    "dns",
+    "tls",
+    "agent-security",
+    "open",
+    "stack",
+    "x402",
+    "pre-interact",
+    "url-risk",
+    "linksafu",
+    "bulk"
+  ],
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "src/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/src/index.js"
+      ],
+      "env": {
+        "BRIEF_API_BASE": "${user_config.brief_api_base}",
+        "BRIEF_API_KEY": "${user_config.brief_api_key}"
+      }
+    }
+  },
+  "tools_generated": true,
+  "user_config": {
+    "brief_api_base": {
+      "type": "string",
+      "title": "API base",
+      "default": "https://54ch10.uk",
+      "required": false,
+      "description": "54ch10 API base URL"
+    },
+    "brief_api_key": {
+      "type": "string",
+      "title": "API key or stack id (optional)",
+      "sensitive": true,
+      "required": false,
+      "description": "One env: stack id \u2192 X-54ch10-Stack; 54k_\u2026 \u2192 Bearer; empty \u2192 free (X-54ch10-Free). Optional alias BRIEF_STACK_ID also accepted by the server."
+    }
+  }
+}

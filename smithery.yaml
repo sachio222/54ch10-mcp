@@ -1,0 +1,26 @@
+# Smithery metadata for 54ch10-mcp (stdio / mcpb)
+name: 54ch10
+description: Wrap before you click — pre-interact URL check for agents. Jobs: open (GET /v1/open page_risk + domain), open_batch, fetch (SSRF-safe markdown), domain (whois/dns/tls). Free taste then $1/80 stack.
+homepage: https://54ch10.uk
+repository: https://github.com/sachio222/54ch10-mcp
+documentation: https://54ch10.uk/wire.md
+license: MIT
+keywords:
+  - mcp
+  - url-safety
+  - ssrf
+  - whois
+  - dns
+  - tls
+  - agent-security
+  - wrap-before-click
+  - open
+  - stack
+  - x402
+  - pre-interact
+  - url-risk
+  - linksafu
+  - bulk
+categories:
+  - security
+  - productivity

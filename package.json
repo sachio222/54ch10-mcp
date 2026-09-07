@@ -1,7 +1,7 @@
 {
   "name": "54ch10-mcp",
-  "version": "0.3.0",
-  "description": "54ch10 MCP: brief + toolkit (whois/dns/tls/normalize/hash/encode/fetch/paste) against https://54ch10.uk. Analytics-only.",
+  "version": "0.3.3",
+  "description": "Wrap before you click \u2014 pre-interact URL check for agents (GET /v1/open page_risk, stack, SSRF-safe fetch, whois/dns/tls). Analytics-only.",
   "type": "module",
   "bin": {
     "54ch10-mcp": "./src/index.js"
@@ -26,7 +26,17 @@
     "security",
     "cryptocurrency",
     "model-context-protocol",
-    "x402"
+    "x402",
+    "url-safety",
+    "ssrf",
+    "agent-security",
+    "wrap-before-click",
+    "open",
+    "stack",
+    "pre-interact",
+    "linksafu",
+    "bulk",
+    "url-risk"
   ],
   "license": "MIT",
   "dependencies": {
@@ -51,5 +61,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@anthropic-ai/mcpb": "^2.1.2"
   }
 }
