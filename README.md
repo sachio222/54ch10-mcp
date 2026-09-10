@@ -1,6 +1,7 @@
 # 54ch10 MCP — wrap before you click
 
 **Job:** pre-interact URL risk brief for agents (`page_risk`, whois/dns/tls, SSRF-safe fetch). **Analytics-only** — not financial, legal, or investment advice. Not clearance.
+**Page extraction:** `GET https://54ch10.uk/v1/fetch?url=` at **$0.005** (SSRF-safe). Then wrap-before-click with `url.open`.
 
 ```bash
 npx -y github:sachio222/54ch10-mcp
