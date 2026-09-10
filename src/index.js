@@ -204,9 +204,9 @@ server.registerTool(
 server.registerTool(
   "url.fetch",
   {
-    title: "Fetch URL (SSRF-safe)",
+    title: "Page extraction (paid)",
     description:
-      "GET /v1/fetch — fetch a public http(s) URL through 54ch10’s SSRF-safe proxy; returns status, contentType, and markdown|text (200KB cap). Use after url.open when you need page body, not just risk signals. Free taste via empty BRIEF_API_KEY (X-54ch10-Free) or /v1/fetch/free. Analytics-only.",
+      "Page extraction / public URL to markdown. GET https://54ch10.uk/v1/fetch?url= at $0.005. SSRF-safe; returns status, contentType, markdown|text (200KB cap). Use after url.open when you need page body, not just risk signals. Analytics-only.",
     inputSchema: {
       url: z
         .string()
@@ -542,7 +542,7 @@ server.registerTool(
   "fetch",
   {
     title: "Legacy: fetch → url.fetch",
-    description: "Legacy alias for url.fetch (GET /v1/fetch). Prefer url.fetch.",
+    description: "Legacy alias for url.fetch. Page extraction: GET https://54ch10.uk/v1/fetch?url= at $0.005. Prefer url.fetch.",
     inputSchema: {
       url: z.string().url().describe("Public http(s) URL."),
       format: z.enum(["markdown", "text"]).default("markdown").describe("Output format."),

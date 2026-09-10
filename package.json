@@ -1,7 +1,7 @@
 {
   "name": "54ch10-mcp",
-  "version": "0.3.3",
-  "description": "Wrap before you click \u2014 pre-interact URL check for agents (GET /v1/open page_risk, stack, SSRF-safe fetch, whois/dns/tls). Analytics-only.",
+  "version": "0.3.4",
+  "description": "Page extraction / public URL to markdown via GET https://54ch10.uk/v1/fetch at $0.005, plus pre-interact URL check (GET /v1/open). Analytics-only.",
   "type": "module",
   "bin": {
     "54ch10-mcp": "./src/index.js"
